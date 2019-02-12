@@ -3,6 +3,7 @@ package parra.mario.calculadora
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import org.w3c.dom.Text
@@ -10,6 +11,7 @@ import org.w3c.dom.Text
 class Calculadora2 : AppCompatActivity() {
     var campoTexto1: TextView? = null
     var campoTexto2: TextView? = null
+    var boton: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +19,10 @@ class Calculadora2 : AppCompatActivity() {
 
         campoTexto1 = findViewById(R.id.texto1) as TextView
         campoTexto2 = findViewById(R.id.texto2) as TextView
+
+        boton = findViewById(R.id.boton0) as Button
     }
+
 
     fun resultado(v: View){
         if (!campoTexto2?.text.isNullOrBlank() && !campoTexto1?.text.isNullOrBlank()){
